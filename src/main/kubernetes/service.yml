@@ -1,0 +1,19 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: sender
+  annotations:
+    fabric8.io/ingress.path: /
+    fabric8.io/ingress.annotations: |-
+      ingress.kubernetes.io/rewrite-target: /
+      ingress.kubernetes.io/force-ssl-redirect: true
+      kubernetes.io/ingress.class: internal-ingress
+  labels:
+      expose: "true"
+spec:
+  selector:
+    app: sender
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080
