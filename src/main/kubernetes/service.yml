@@ -3,11 +3,11 @@ apiVersion: v1
 metadata:
   name: sender
   annotations:
-    fabric8.io/ingress.path: /
+    fabric8.io/ingress.path: /api/sender/
     fabric8.io/ingress.annotations: |-
       ingress.kubernetes.io/rewrite-target: /
       ingress.kubernetes.io/force-ssl-redirect: true
-      kubernetes.io/ingress.class: internal-ingress
+      kubernetes.io/ingress.class: external-ingress
   labels:
       expose: "true"
 spec:
