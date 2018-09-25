@@ -1,0 +1,8 @@
+spring:
+    application:
+        name: sender
+    cloud:
+        kubernetes:
+            config:
+              name: sender
+              namespace: mock
