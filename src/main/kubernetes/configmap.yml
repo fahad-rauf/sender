@@ -3,6 +3,10 @@ apiVersion: v1
 metadata:
   name: sender
 data:
-    application.yaml: |-
-      greeting:
-        message: Hello from yml
+    application.properties: |-
+      spring.cloud.stream.kafka.binder.brokers=broker
+      spring.cloud.stream.kafka.binder.zkNodes=zookeeper
+      spring.cloud.stream.kafka.binder.autoAddPartitions="true"
+      spring.cloud.stream.bindings.helloWorld.destination=helloWorld
+      spring.cloud.stream.bindings.helloWorld.producer.partitionCount=2
+      spring.cloud.stream.bindings.helloWorld.producer.partitionKeyExpression=hashCode()  
