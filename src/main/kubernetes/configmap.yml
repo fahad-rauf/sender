@@ -9,4 +9,4 @@ data:
       spring.cloud.stream.kafka.binder.autoAddPartitions=true
       spring.cloud.stream.bindings.helloWorld.destination=helloWorld
       spring.cloud.stream.bindings.helloWorld.producer.partitionCount=2
-      spring.cloud.stream.bindings.helloWorld.producer.partitionKeyExpression=hashCode()  
+      spring.cloud.stream.bindings.helloWorld.producer.partitionKeyExpression=hashCode()
