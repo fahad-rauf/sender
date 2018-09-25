@@ -14,6 +14,7 @@ spec:
       labels:
         app: sender
     spec:
+      serviceAccountName: sender
       containers:
       - name: sender
         image: fahadrauf/sender
